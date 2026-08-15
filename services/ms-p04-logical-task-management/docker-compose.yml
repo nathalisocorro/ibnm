@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:18.4
+    container_name: ibnm-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: ibnm
+      POSTGRES_PASSWORD: ibnm_password
+      POSTGRES_DB: ibnm
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+volumes:
+  postgres_data:
