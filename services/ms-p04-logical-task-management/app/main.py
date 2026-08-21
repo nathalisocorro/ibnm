@@ -8,7 +8,7 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="MS-P04 Logical Task Management",
     version="0.1.0",
-    description="Microservicio inicial para la gestión de tareas lógicas del proyecto IBNM.",
+    description="Microservicio para la gestión de tareas lógicas del proyecto IBNM.",
 )
 
 app.include_router(router)
