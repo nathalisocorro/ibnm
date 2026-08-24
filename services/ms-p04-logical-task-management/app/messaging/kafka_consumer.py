@@ -35,7 +35,7 @@ async def consume_policy_proposed():
                 )
 
                 print(
-                    f"Logical task creada: {task.task_id}"
+                    f"Logical task created: {task.task_id}"
                 )
 
                 await consumer.commit()
@@ -44,7 +44,7 @@ async def consume_policy_proposed():
                 db.rollback()
 
                 print(
-                    f"Error procesando POLICY_PROPOSED: {error}"
+                    f"Failed processing POLICY_PROPOSED: {error}"
                 )
 
             finally:
